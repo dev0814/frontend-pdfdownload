@@ -105,8 +105,7 @@ function App() {
           <div className="hero-inner">
             <h1 className="hero-title">Free PDF Resources</h1>
             <p className="hero-subtitle">
-              Download our curated catalogues, whitepapers and case studies.
-              Simply share your details and get instant access.
+              Download any PDF.
             </p>
           </div>
         </section>
