@@ -148,9 +148,9 @@ function DownloadPage() {
                       <p className="success-hint">
                         Your download should begin automatically.
                       </p>
-                      <Link to="/" className="btn btn-primary">
+                      {/* <Link to="/" className="btn btn-primary">
                         Back to Listing
-                      </Link>
+                      </Link> */}
                     </div>
                   ) : (
                     <DownloadForm
