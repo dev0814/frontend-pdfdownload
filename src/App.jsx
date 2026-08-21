@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import DocumentCard from './components/DocumentCard';
 import DownloadModal from './components/DownloadModal';
+import QRCodeModal from './components/QRCodeModal';
 import { fetchPdfs, submitDownload } from './services/api';
 import './App.css';
 
@@ -12,6 +13,8 @@ function App() {
   const [loadError, setLoadError] = useState('');
   const [selectedPdf, setSelectedPdf] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [qrSelectedPdf, setQrSelectedPdf] = useState(null);
+  const [isQRModalOpen, setIsQRModalOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
@@ -40,6 +43,11 @@ function App() {
     setIsModalOpen(true);
   }
 
+  function handleGenerateQR(pdf) {
+    setQrSelectedPdf(pdf);
+    setIsQRModalOpen(true);
+  }
+
   function handleCloseModal() {
     if (isSubmitting) return;
     setIsModalOpen(false);
@@ -47,6 +55,13 @@ function App() {
       setSelectedPdf(null);
       setSubmitError('');
       setSuccessMessage('');
+    }, 200);
+  }
+
+  function handleCloseQRModal() {
+    setIsQRModalOpen(false);
+    setTimeout(() => {
+      setQrSelectedPdf(null);
     }, 200);
   }
 
@@ -139,6 +154,7 @@ function App() {
                   key={pdf.id}
                   pdf={pdf}
                   onDownload={handleDownloadClick}
+                  onGenerateQR={handleGenerateQR}
                 />
               ))}
             </div>
@@ -156,6 +172,12 @@ function App() {
         isLoading={isSubmitting}
         error={submitError}
         successMessage={successMessage}
+      />
+
+      <QRCodeModal
+        isOpen={isQRModalOpen}
+        pdf={qrSelectedPdf}
+        onClose={handleCloseQRModal}
       />
     </div>
   );

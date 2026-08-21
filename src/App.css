@@ -199,10 +199,31 @@
   width: 100%;
 }
 
+.btn-qr {
+  width: 100%;
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: var(--primary-light);
+}
+
 .btn-submit {
   width: 100%;
   padding: 0.9rem 1.25rem;
   font-size: 1rem;
+}
+
+.card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  width: 100%;
 }
 
 /* =============== Loading / error / empty states =============== */
@@ -447,6 +468,187 @@
 
 .success-box .btn {
   min-width: 140px;
+}
+
+/* =============== QR Code Modal =============== */
+.qr-modal {
+  max-width: 440px;
+}
+
+.qr-modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.25rem;
+}
+
+.qr-code-wrapper {
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  display: inline-block;
+}
+
+.qr-code-wrapper canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.qr-url-label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.75rem;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-align: left;
+}
+
+.qr-url-label-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.qr-url-value {
+  font-size: 0.8rem;
+  color: var(--text);
+  word-break: break-all;
+  padding: 0.35rem 0.5rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.qr-actions {
+  width: 100%;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.qr-actions .btn {
+  min-width: 140px;
+}
+
+/* =============== Download Page =============== */
+.download-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.download-page-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  width: fit-content;
+}
+
+.back-link:hover {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.download-not-found {
+  gap: 1.25rem;
+}
+
+.not-found-icon {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.not-found-title {
+  font-size: 1.75rem;
+  color: var(--text);
+  margin: 0;
+}
+
+.not-found-message {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.download-content {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.download-pdf-info {
+  padding: 2rem 2rem 1.5rem;
+  text-align: center;
+  background: var(--primary-light);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.document-icon-large {
+  width: 96px;
+  height: 96px;
+  font-size: 3.5rem;
+  margin-bottom: 0;
+}
+
+.download-pdf-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text);
+}
+
+.download-pdf-description {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: 0;
+  max-width: 520px;
+}
+
+.download-form-container {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.download-form-heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.download-form-subheading {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 0 0 0.5rem;
 }
 
 /* =============== Footer =============== */

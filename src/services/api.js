@@ -32,6 +32,11 @@ export async function fetchPdfs() {
   return response.data;
 }
 
+export async function fetchPdfById(id) {
+  const response = await api.get(`/pdfs/${encodeURIComponent(id)}`);
+  return response.data;
+}
+
 export async function submitDownload(payload) {
   const response = await api.post('/download', payload);
   return response.data;
