@@ -95,9 +95,9 @@ function DownloadPage() {
       <main className="main">
         <section className="download-page">
           <div className="download-page-inner">
-            <Link to="/" className="back-link">
+            {/* <Link to="/" className="back-link">
               ← Back to PDF listing
-            </Link>
+            </Link> */}
 
             {isLoading ? (
               <div className="loading-state">
@@ -151,6 +151,15 @@ function DownloadPage() {
                       {/* <Link to="/" className="btn btn-primary">
                         Back to Listing
                       </Link> */}
+
+                      <button
+                        type="button"
+                        className="btn btn-primary"
+                        onClick={() => window.close()}
+                      >
+                        Close Tab
+                      </button>
+
                     </div>
                   ) : (
                     <DownloadForm
