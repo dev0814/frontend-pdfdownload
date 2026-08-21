@@ -3,7 +3,7 @@ function Header() {
     <header className="header">
       <div className="header-container">
         <div className="logo">
-          <span className="logo-icon">📄</span>
+          {/* <span className="logo-icon">📄</span> */}
           <span className="logo-text">PDF Hub</span>
         </div>
         <nav className="nav">
