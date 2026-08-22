@@ -31,7 +31,7 @@ function validateForm(form) {
 
   if (
     form.contactNumber &&
-    !/^[0-9+\-\s()]{7,20}$/.test(form.contactNumber)
+    !/^[0-9]{10}$/.test(form.contactNumber)
   ) {
     errors.contactNumber = 'Please enter a valid contact number';
   }
