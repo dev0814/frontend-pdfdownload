@@ -173,12 +173,12 @@ function DownloadPage() {
 
                 <div className="download-form-container">
                   <h3 className="download-form-heading">
-                    Request your download
+                    Please share your details to download the PDF instantly.
                   </h3>
 
-                  <p className="download-form-subheading">
+                  {/* <p className="download-form-subheading">
                     Please share your details to download the PDF instantly.
-                  </p>
+                  </p> */}
 
                   {successMessage ? (
                     <div className="success-box">

@@ -4,11 +4,14 @@ function Header() {
       <div className="header-container">
         <div className="logo">
           {/* <span className="logo-icon">📄</span> */}
-          <span className="logo-text">PDF Hub</span>
+          {/* <span className="logo-text">Efforts Consulting</span> */}
+
+          <span className="logo-text"><a href= "https://effortsconsulting.com/">Efforts Consulting</a></span>
+          
         </div>
-        <nav className="nav">
+        {/* <nav className="nav">
           <a href="#resources">Resources</a>
-        </nav>
+        </nav> */}
       </div>
     </header>
   );

@@ -7,13 +7,13 @@ function DocumentCard({ pdf, onDownload, onGenerateQR }) {
       <h3 className="document-title">{pdf.name}</h3>
       <p className="document-description">{pdf.description}</p>
       <div className="card-actions">
-        <button
+        {/* <button
           type="button"
           className="btn btn-primary btn-download"
           onClick={() => onDownload(pdf)}
         >
           <span>⬇</span> Download PDF
-        </button>
+        </button> */}
         <button
           type="button"
           className="btn btn-secondary btn-qr"
