@@ -3,7 +3,7 @@ function Header() {
     <header className="header">
       <div className="header-container">
         <div className="logo">
-          {/* <span className="logo-icon">📄</span> */}
+          <span className="logo-icon"><a href= "https://effortsconsulting.com/"><img src="/logo-new-1.jpg" alt="Logo" /></a></span>
           {/* <span className="logo-text">Efforts Consulting</span> */}
 
           <span className="logo-text"><a href= "https://effortsconsulting.com/">Efforts Consulting</a></span>

@@ -5,8 +5,8 @@ function Footer() {
       <div className="footer-container">
         <div className="footer-section">
           <div className="logo">
-            <span className="logo-icon">📄</span>
-            <span className="logo-text">Efforts Consulting</span>
+            <span className="logo-icon"></span>
+            <span className="logo-text"><a href= "https://effortsconsulting.com/">Efforts Consulting</a></span>
           </div>
           {/* <p className="footer-tagline">
             Download curated resources instantly after sharing your details.
